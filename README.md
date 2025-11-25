@@ -114,6 +114,37 @@ ChoppersSalon/
 ├─ package.json               # Project metadata and dependencies:contentReference[oaicite:18]{index=18}
 └─ README.md                  # Project overview (you are reading it)
 
+## 📸 Screenshots
+
+### 🏠 Homepage
+![Homepage](./public/screenshots/homepage.png)
+
+### 💈 Services
+![Services](./public/screenshots/services.png)
+
+### 🗓️ Booking Flow
+**Step 1 – Choose Category**  
+![Step 1](./public/screenshots/booking-step1.png)
+
+**Step 2 – Choose Service**  
+![Step 2](./public/screenshots/booking-step2.png)
+
+**Step 3 – Confirmation**  
+![Step 3](./public/screenshots/booking-step3.png)
+
+### 🔐 Admin Login
+![Admin Login](./public/screenshots/admin-login.png)
+
+### 📊 Admin Dashboard
+![Dashboard](./public/screenshots/admin-dashboard.png)
+
+### 👤 User Management
+![Users](./public/screenshots/admin-users.png)
+
+### 📅 Appointments Management
+![Appointments](./public/screenshots/admin-appointments.png)
+
+
 🚀 Getting Started
 
 Prerequisites: You need Node.js installed on your system.
