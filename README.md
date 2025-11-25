@@ -123,10 +123,10 @@ ChoppersSalon/
 ![Services](./public/screenshots/services.png)
 
 ### 🗓️ Booking Flow
-**Step 1 – Choose Category**  
+**Step 1 – Choose Service**  
 ![Step 1](./public/screenshots/booking-step1.png)
 
-**Step 2 – Choose Service**  
+**Step 2 – Choose Time**  
 ![Step 2](./public/screenshots/booking-step2.png)
 
 **Step 3 – Confirmation**  
