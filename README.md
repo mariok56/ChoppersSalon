@@ -156,8 +156,6 @@ ChoppersSalon/
 
 ## 📸 Screenshots
 
-> Add your real screenshots in `/public/screenshots/`
-
 ### 🏠 Homepage  
 ![Homepage](./public/screenshots/homepage.png)
 
