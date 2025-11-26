@@ -1,128 +1,170 @@
-Choppers Salon – Full‑Stack Hair Salon Web App
+# Choppers Salon – Full-Stack Hair Salon Web App
 
-Choppers Salon is a full‑stack hair‑salon platform built with React + TypeScript on top of Vite and [Tailwind CSS]. It uses the Shadcn UI component library and Radix primitives to deliver a clean, responsive interface. The site includes a marketing homepage, service catalogue, multi‑step appointment booking, authentication and a back‑office admin portal. Data is stored in Firebase Firestore, authentication is handled via Supabase, and state management uses Zustand. The project started as an auto‑generated Anima design but has been expanded into a real‑world product.
+Choppers Salon is a modern, full-stack hair-salon platform built with **React + TypeScript**, powered by **Vite**, styled with **Tailwind CSS**, and enhanced with **Shadcn UI** and **Radix UI**.  
+The platform includes:
 
-✨ Key Features
-🌟 Landing page
+- A public marketing website  
+- Services catalogue  
+- Multi-step appointment booking  
+- Authentication  
+- Complete admin dashboard  
 
-A hero section with a welcome message, tagline and call‑to‑action buttons. Visitors can click “Book Now” to jump straight into the booking flow or “All Services” to browse the services catalogue
-raw.githubusercontent.com
-.
+Data uses **Firebase Firestore**, authentication uses **Supabase**, and global state is managed with **Zustand**.
 
-Responsive image and overlay ensures the design looks great on desktop and mobile
-raw.githubusercontent.com
-.
+---
 
-💇‍♀️ Services catalogue
+## ✨ Key Features
 
-Categories for Haircuts, Coloring, Styling and Treatments with a tabbed interface to switch between them
-raw.githubusercontent.com
-.
+---
 
-Each service card displays the service name, description, price and duration
-raw.githubusercontent.com
- and includes a “Book Now” button that takes users to the booking flow
-raw.githubusercontent.com
-.
+### 🌟 Landing Page
+- Hero section with welcome text, tagline, and CTAs  
+- “Book Now” → jumps directly into the booking flow  
+- “All Services” → opens service catalogue  
+- Fully responsive (desktop, tablet, mobile)
 
-The catalogue is data‑driven; you can add or modify categories and services via Firestore or the admin portal.
+---
 
-📆 Appointment booking (protected route)
+### 💇‍♀️ Services Catalogue
+- Organized categories: Haircuts, Coloring, Styling, Treatments  
+- Dynamic, tabbed interface  
+- Each card includes:
+  - Name  
+  - Description  
+  - Price  
+  - Duration  
+  - “Book Now” button  
+- All services fully managed via Firestore or the admin dashboard
 
-Multi‑step flow that guides users through Service selection → Stylist selection → Date → Time → Confirmation
-raw.githubusercontent.com
-raw.githubusercontent.com
-.
+---
 
-Data is fetched from Firestore on mount, including salon settings, services and stylists
-raw.githubusercontent.com
-.
+### 📆 Appointment Booking (Protected Route)
+A guided multi-step flow:
 
-Users can manage existing appointments via a Manage Appointments tab
-raw.githubusercontent.com
-.
+1. Select Service  
+2. Choose Stylist  
+3. Select Date  
+4. Select Time  
+5. Confirm Booking  
 
-🔐 Authentication & protected routes
+Additional features:
+- Pulls live data from Firestore  
+- Users can view, manage, and cancel existing appointments  
 
-Sign‑in and sign‑up pages using Supabase; password hashing via bcryptjs.
+---
 
-The booking page and admin pages are wrapped in a ProtectedRoute component so only authenticated users can book or access the dashboard
-raw.githubusercontent.com
-.
+### 🔐 Authentication & Protected Routes
+- Built with **Supabase Auth**  
+- Password hashing via `bcryptjs`  
+- Booking pages and Admin Dashboard require authentication  
+- ProtectedRoute wrapper ensures route security  
 
-🛒 Shop & e‑commerce (coming soon)
+---
 
-A Shop page (placeholder) ready to showcase and sell hair products and accessories.
+### 🛒 Shop (Coming Soon)
+- Placeholder for e-commerce functionality  
+- Designed to later sell hair products & accessories  
 
-🧑‍💼 Admin dashboard
+---
 
-Accessed via /admin, the back‑office portal allows salon staff to manage the business.
+### 🧑‍💼 Admin Dashboard
+Accessible at `/admin`, includes:
 
-Overview: displays metrics such as total users, today’s appointments, revenue and total products, calculated from Firestore collections
-raw.githubusercontent.com
-.
+#### ✔️ Overview
+- Total Users  
+- Today’s Appointments  
+- Revenue  
+- Total Products  
 
-Users: lists all users with search functionality; admins can toggle a user’s role between admin and user
-raw.githubusercontent.com
-.
+#### ✔️ Users Management
+- Search  
+- View user details  
+- Toggle role: user ↔ admin  
 
-Appointments: lists all appointments, supports filtering (all / upcoming / completed / cancelled) and allows marking an appointment as completed or cancelled
-raw.githubusercontent.com
-raw.githubusercontent.com
-.
+#### ✔️ Appointments Management
+- List all appointments  
+- Filter by: All, Upcoming, Completed, Cancelled  
+- Mark appointment status  
 
-Orders & Products: placeholders ready for integration with a commerce back end.
+#### ✔️ Products & Orders
+- Placeholder pages ready for future e-commerce integration  
 
-Settings: manage salon settings such as working hours and contact details.
+#### ✔️ Settings
+- Salon hours  
+- Contact details  
+- Salon metadata  
 
-📱 Responsive design & dark mode
+---
 
-Fully responsive layouts built with Tailwind CSS and custom classes.
+### 📱 Responsive + Dark Mode
+- Fully responsive pages  
+- Light and dark themes  
+- Consistent branding using Tailwind + custom classes  
 
-Dark theme styling with gray backgrounds and accent colours (yellow/orange) as shown in the code snippets.
+---
 
-📧 Email templates
+### 📧 Email Templates
+`emailTemplates.ts` includes:
+- Booking confirmation HTML email  
+- Password reset template  
 
-emailTemplates.ts contains ready‑to‑use HTML templates for sending booking confirmations and password reset emails.
+---
 
-🧰 Tech Stack
-Layer	Technologies
-Frontend	React 18, TypeScript, Vite, React Router v7, Zustand state management, React Hook Form + Zod for forms
-Styling	Tailwind CSS, Shadcn UI components, Radix UI primitives, custom fonts (Poppins & Jost)
-Backend	Firebase Firestore (services, stylists, appointments, orders, products), Supabase for authentication
-Utilities	Lucide‑React icons, Lodash, Class‑variance‑authority (cva) for styling variants
-📂 Project Structure (simplified)
+## 🧰 Tech Stack
+
+### Frontend  
+React 18, TypeScript, Vite, React Router v7, Zustand, React Hook Form, Zod
+
+### Styling  
+Tailwind CSS, Shadcn UI, Radix UI, Poppins, Jost
+
+### Backend / Data  
+Firebase Firestore, Supabase Authentication
+
+### Utilities  
+Lucide React, Lodash, Class-variance-authority (cva)
+
+---
+
+## 📂 Project Structure
+
+```
 ChoppersSalon/
-├─ public/                     # Static assets (images, icons, fonts)
+├─ public/                 # Static assets (images, icons, fonts)
 ├─ src/
-│  ├─ components/             # Shared components (Navbar, Footer, ProtectedRoute, etc.)
-│  ├─ config/                 # Supabase and Firebase configuration
-│  ├─ routes/router.tsx       # Route definitions for user and admin areas:contentReference[oaicite:14]{index=14}
+│  ├─ components/          # Shared components (Navbar, Footer, ProtectedRoute)
+│  ├─ config/              # Firebase & Supabase setup
+│  ├─ routes/
+│  │   └─ router.tsx       # Route definitions
 │  ├─ screens/
-│  │  ├─ Home.tsx             # Landing page with hero and CTA buttons:contentReference[oaicite:15]{index=15}
-│  │  ├─ Services.tsx         # Services catalogue with categories and service cards:contentReference[oaicite:16]{index=16}:contentReference[oaicite:17]{index=17}
-│  │  ├─ booking/             # Multi‑step booking flow (service, stylist, date, time, confirmation)
-│  │  ├─ admin/               # Admin pages (Dashboard, Overview, Users, Appointments, Orders, Products, Settings)
-│  │  ├─ Auth/                # Login and Register pages
-│  │  ├─ Contact.tsx          # Contact form and salon location
-│  │  ├─ About.tsx            # About page with salon history and team
-│  │  └─ Shop.tsx             # Shop page (placeholder)
-│  ├─ store/                  # Zustand stores (authStore, bookingStore)
-│  ├─ utils/                  # Helper functions and constants
-│  └─ App.tsx                 # Top‑level component mounting routes
-├─ tailwind.config.js         # Tailwind customisation (colours, fonts, etc.)
-├─ package.json               # Project metadata and dependencies:contentReference[oaicite:18]{index=18}
-└─ README.md                  # Project overview (you are reading it)
+│  │   ├─ Home.tsx         # Landing page
+│  │   ├─ Services.tsx     # Services catalogue
+│  │   ├─ booking/         # Multi-step booking flow
+│  │   ├─ admin/           # Dashboard: Overview, Users, Appointments, etc.
+│  │   ├─ Auth/            # Login / Register
+│  │   ├─ Contact.tsx      # Contact page
+│  │   └─ About.tsx        # About page
+│  ├─ store/               # Zustand stores
+│  ├─ utils/               # Helper functions
+│  └─ App.tsx              # Root component
+├─ tailwind.config.js
+├─ package.json
+└─ README.md
+```
+
+---
 
 ## 📸 Screenshots
 
-### 🏠 Homepage
+> Add your real screenshots in `/public/screenshots/`
+
+### 🏠 Homepage  
 ![Homepage](./public/screenshots/homepage.png)
 
-### 💈 Services
+### 💈 Services  
 ![Services](./public/screenshots/services.png)
 
-### 🗓️ Booking Flow
+### 🗓️ Booking Flow  
 **Step 1 – Choose Service**  
 ![Step 1](./public/screenshots/booking-step1.png)
 
@@ -132,81 +174,73 @@ ChoppersSalon/
 **Step 3 – Confirmation**  
 ![Step 3](./public/screenshots/booking-step3.png)
 
-### 🔐 Admin Login
+### 🔐 Admin Login  
 ![Admin Login](./public/screenshots/admin-login.png)
 
-### 📊 Admin Dashboard
+### 📊 Admin Dashboard  
 ![Dashboard](./public/screenshots/admin-dashboard.png)
 
-### 👤 User Management
+### 👤 User Management  
 ![Users](./public/screenshots/admin-users.png)
 
-### 📅 Appointments Management
+### 📅 Appointments Management  
 ![Appointments](./public/screenshots/admin-appointments.png)
 
+---
 
-🚀 Getting Started
+## 🚀 Getting Started
 
-Prerequisites: You need Node.js installed on your system.
-The default config expects Firebase and Supabase credentials; create accounts and collect your keys before running the app.
-
-Clone the repository
-
+### 1. Clone the Repository
+```bash
 git clone https://github.com/mariok56/ChoppersSalon.git
 cd ChoppersSalon
+```
 
-
-Install dependencies (one time):
-
+### 2. Install Dependencies
+```bash
 npm install
+```
 
+### 3. Configure Environment Variables  
+Create `.env` with:
 
-Configure environment variables:
+```
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
 
-Copy .env.example to .env (create one if it doesn’t exist).
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_APP_ID=
+```
 
-Set the following variables with your own keys:
-
-VITE_SUPABASE_URL=<your-supabase-url>
-VITE_SUPABASE_ANON_KEY=<your-supabase-anon-key>
-
-VITE_FIREBASE_API_KEY=<your-firebase-api-key>
-VITE_FIREBASE_AUTH_DOMAIN=<your-firebase-auth-domain>
-VITE_FIREBASE_PROJECT_ID=<your-firebase-project-id>
-VITE_FIREBASE_STORAGE_BUCKET=<your-firebase-storage-bucket>
-VITE_FIREBASE_MESSAGING_SENDER_ID=<your-firebase-messaging-sender-id>
-VITE_FIREBASE_APP_ID=<your-firebase-app-id>
-
-
-Run the development server:
-
+### 4. Run Development Server
+```bash
 npm run dev
+```
 
+Visit:  
+http://localhost:5173
 
-After a few seconds the app will be available at http://localhost:5173
- 
-github.com
-.
-
-Build for production:
-
+### 5. Build for Production
+```bash
 npm run build
+```
 
+---
 
-The compiled files will be output to the dist/ directory, ready to be deployed.
+## 🧑‍💻 Contributing
 
-🧑‍💻 Contributing
+1. Fork the repo  
+2. Create a new branch  
+3. Commit with clear messages  
+4. Open a pull request  
 
-Contributions are welcome! If you find a bug or want to propose a new feature:
+---
 
-Fork this repository and create a branch for your feature or bugfix.
+## 📄 License
 
-Make your changes and commit with clear messages.
-
-Open a pull request describing your changes and reference any related issues.
-
-Please follow the existing coding style and file structure. Issue reports and suggestions via GitHub Issues are also appreciated.
-
-📄 License
-
-This project is provided for educational and portfolio purposes and does not yet include an official open‑source license. Feel free to clone and experiment, but please contact the author if you plan to use it in production.
+This project is for educational & portfolio purposes.  
+If you want to use it in production, please contact the author.
